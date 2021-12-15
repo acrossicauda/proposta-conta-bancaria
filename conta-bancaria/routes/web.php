@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+Route::group(array('prefix' => 'api'), function() {
+    Route::post('transaction', 'App\Http\Controllers\ApiTransactionController@index');
 });

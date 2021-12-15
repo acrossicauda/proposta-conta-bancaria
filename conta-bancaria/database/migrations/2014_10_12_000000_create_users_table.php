@@ -13,13 +13,14 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
+        //“CodigoCliente”, “Ativa“ e “LimiteDisponivel“ –
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->id('CodigoCliente');
             $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->string('api_token');
             $table->string('password');
-            $table->rememberToken();
+            $table->integer('Ativa');
+            $table->double('LimiteDisponivel');
             $table->timestamps();
         });
     }
