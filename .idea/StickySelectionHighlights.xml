@@ -8,6 +8,11 @@
             <PaintGroupHighlightMap />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/conta-bancaria/README.md">
+          <value>
+            <PaintGroupHighlightMap />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/conta-bancaria/app/Http/Controllers/ApiTransactionController.php">
           <value>
             <PaintGroupHighlightMap />

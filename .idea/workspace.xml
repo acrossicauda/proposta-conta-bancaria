@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="561305be-bd86-465d-9fc0-64b3588116e8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/StickySelectionHighlights.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conta-bancaria/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/conta-bancaria/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conta-bancaria/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/conta-bancaria/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conta-bancaria/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/conta-bancaria/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conta-bancaria/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/conta-bancaria/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conta-bancaria/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conta-bancaria/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/conta-bancaria/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conta-bancaria/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/conta-bancaria/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conta-bancaria/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/conta-bancaria/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/StickySelectionHighlights.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/StickySelectionHighlights.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conta-bancaria/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/conta-bancaria/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,7 +56,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/conta-bancaria/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="68">
+                <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conta-bancaria/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
@@ -85,6 +90,7 @@
       <find>setSaldo</find>
       <find>api_transaction</find>
       <find>validateTransition</find>
+      <find>Open the DummyDataSeeder and set the property values as per your requirement</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -107,6 +113,7 @@
         <option value="$PROJECT_DIR$/conta-bancaria/app/Http/Middleware/VerifyCsrfToken.php" />
         <option value="$PROJECT_DIR$/conta-bancaria/app/Http/Controllers/ApiTransactionController.php" />
         <option value="$PROJECT_DIR$/conta-bancaria/app/Http/Controllers/Transaction.php" />
+        <option value="$PROJECT_DIR$/conta-bancaria/README.md" />
       </list>
     </option>
   </component>
@@ -326,12 +333,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639573690093</updated>
-      <workItem from="1639573691783" duration="14331000" />
+      <workItem from="1639573691783" duration="16389000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14331000" />
+    <option name="totallyTimeSpent" value="16389000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -344,8 +351,8 @@
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32838285" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2634368" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32838285" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2634368" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -494,6 +501,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/conta-bancaria/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/conta-bancaria/app/Providers/RouteServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -501,10 +515,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conta-bancaria/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+    <entry file="file://$PROJECT_DIR$/conta-bancaria/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="68">
+            <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
