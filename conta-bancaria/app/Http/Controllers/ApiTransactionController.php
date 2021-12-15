@@ -19,21 +19,20 @@ class ApiTransactionController extends Controller
 
         $transaction = new Transaction();
 
-        if(isset($_GET['teste'])) {
-            $post = $transaction->set_data_json();
-        }
-
         $codigoCliente = $post['conta']['codigoCliente'];
 
         $user = User::find($codigoCliente);
 
         if(!$user->Ativa) {
-            return response()->json([
-                "conta" => [
-                    'Cliente' => ['codigoCliente' => $codigoCliente, 'Ativa' => $user->Ativa, 'LimiteDisponivel' => $user->LimiteDisponivel],
-                    'violacao' => ['conta-nao-ativa']
-                ]
-            ], 200);
+            return response()->json(array(
+                "conta" => array(
+                    'Cliente' => array(
+                        'codigoCliente' => $codigoCliente, 'Ativa' => $user->Ativa,
+                        'LimiteDisponivel' => $user->LimiteDisponivel
+                    ),
+                    'violacao' => array('conta-nao-ativa')
+                )
+            ), 200);
         }
 
         $_SESSION['Cliente'][$codigoCliente]['codigoCliente'] = $codigoCliente;
@@ -43,23 +42,26 @@ class ApiTransactionController extends Controller
 
         $post = $transaction->validateTransition($post);
         if(!isset($post['success']) || !$post['success']) {
-            return response()->json([
-                "conta" => [
-                    'Cliente' => ['codigoCliente' => $codigoCliente, 'Ativa' => $user->Ativa, 'LimiteDisponivel' => $user->LimiteDisponivel],
-                    'violacao' => [$post['violacao']]
-                ]
-            ], 200);
+            return response()->json(array(
+                "conta" => array(
+                    'Cliente' => array('codigoCliente' => $codigoCliente, 'Ativa' => $user->Ativa, 'LimiteDisponivel' => $user->LimiteDisponivel),
+                    'violacao' => array($post['violacao'])
+                )
+            ), 200);
         }
 
         // pegando valor atualizado diretamente do banco
         $user = User::find($codigoCliente);
 
-        return response()->json([
-            "conta" => [
-                'Cliente' => ['codigoCliente' => $codigoCliente, 'Ativa' => $user->Ativa, 'LimiteDisponivel' => $user->LimiteDisponivel],
-                'violacao' => []
-            ]
-        ], 201);
+        return response()->json(array(
+            "conta" => array(
+                'Cliente' => array(
+                    'codigoCliente' => $codigoCliente, 'Ativa' => $user->Ativa,
+                    'LimiteDisponivel' => $user->LimiteDisponivel
+                ),
+                'violacao' => array()
+            )
+        ), 201);
     }
 
     /**

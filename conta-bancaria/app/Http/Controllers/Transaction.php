@@ -16,34 +16,6 @@ class Transaction extends Controller
         }
     }
 
-    public function set_data_json()
-    {
-        $arr = [
-            'conta' => [
-                'codigoCliente' => 1, 'Ativa' => true, 'LimiteDisponivel' => 100
-            ],
-            'transacao' => [
-                ['tipo' => 'saque', 'motivo' => 'teste', 'valor' => 30, 'data' => "2021-07-17T17: 00: 00.000Z"],
-                ['tipo' => 'deposito', 'motivo' => 'teste', 'valor' => 10, 'data' => "2021-07-17T18: 00:00.000Z"],
-                ['tipo' => 'saque', 'motivo' => 'teste', 'valor' => 90, 'data' => "2021-07-17T19: 00:00.000Z"],
-            ]
-        ];
-
-        return json_encode($arr);
-    }
-
-    public function get_data_json()
-    {
-        $arr = [
-            ['conta' => ['codigoCliente' => 1, 'Ativa' => true, 'LimiteDisponivel' => 100], 'violacao' => []],
-            ['conta' => ['codigoCliente' => 1, 'Ativa' => true, 'LimiteDisponivel' => 70], 'violacao' => []],
-            ['conta' => ['codigoCliente' => 1, 'Ativa' => true, 'LimiteDisponivel' => 80], 'violacao' => []],
-            ['conta' => ['codigoCliente' => 1, 'Ativa' => true, 'LimiteDisponivel' => 80], 'violacao' => ['limite-insuficiente']],
-        ];
-
-        return json_encode($arr);
-    }
-
     public function validateTransition(Array $arra = array())
     {
         $status = 'fail';
@@ -67,19 +39,20 @@ class Transaction extends Controller
                 ->where('tipo', $val['tipo'])
                 ->where('created_at', 'like', $newDate)->get();
             if($transaction->count() > 0) {
-                $response = ['conta' => [$_SESSION['Cliente'][$codigoCliente]], 'violacao' => ['transação-duplicada']];
+                $response = array('conta' => array($_SESSION['Cliente'][$codigoCliente]),
+                    'violacao' => array('transação-duplicada'));
                 return $response;
             }
             $saldo = $this->setSaldo($val, $limite);
 
-            $newTransaction = [
+            $newTransaction = array(
                 'CodigoCliente' => $codigoCliente, 'LimiteDisponivel' => $saldo,
                 'tipo' => $val['tipo'], 'motivo' => $val['motivo'], 'valor' => $val['valor'], 'data' => $val['data']
-            ];
+            );
 
             if($saldo === false) {
                 $this->setTransition($newTransaction, $status);
-                $response = ['conta' => [$_SESSION['Cliente'][$codigoCliente]], 'violacao' => ['limite-insuficiente']];
+                $response = array('conta' => array($_SESSION['Cliente'][$codigoCliente]), 'violacao' => array('limite-insuficiente'));
                 return $response;
             }
 
@@ -137,7 +110,7 @@ class Transaction extends Controller
         $apiTransaction->save();
 
         $success = false;
-        return ['success' => $success];
+        return array('success' => $success);
     }
 
     /**
@@ -147,6 +120,6 @@ class Transaction extends Controller
     public function getTransition()
     {
         $success = false;
-        return ['success' => $success];
+        return array('success' => $success);
     }
 }
