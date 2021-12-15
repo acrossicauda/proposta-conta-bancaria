@@ -67,7 +67,7 @@ class Transaction extends Controller
                 'tipo' => $val['tipo'], 'motivo' => $val['motivo'], 'valor' => $val['valor'], 'data' => $val['data']
             ];
 
-            if(!$saldo) {
+            if($saldo === false) {
                 $this->setTransition($newTransaction, $status);
                 $response = ['conta' => [$_SESSION['Cliente'][$codigoCliente]], 'violacao' => ['limite-insuficiente']];
                 return $response;
@@ -102,13 +102,12 @@ class Transaction extends Controller
      */
     public function setTransition($dataTransaction, $status = 'fail')
     {
-        /*
-         * # id, tipo, motivo, valor, data, status, user_id, created_at, updated_at
-
-         */
-        $user = User::find($dataTransaction['CodigoCliente']);
-        $user->LimiteDisponivel = $dataTransaction['LimiteDisponivel'];
-        $ok = $user->save();
+        $ok = false;
+        if($status != 'fail') {
+            $user = User::find($dataTransaction['CodigoCliente']);
+            $user->LimiteDisponivel = $dataTransaction['LimiteDisponivel'];
+            $ok = $user->save();
+        }
 
         if(!$ok) {
             $status = 'fail';
