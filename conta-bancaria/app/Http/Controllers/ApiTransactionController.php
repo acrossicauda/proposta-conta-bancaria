@@ -26,6 +26,16 @@ class ApiTransactionController extends Controller
         $codigoCliente = $post['conta']['codigoCliente'];
 
         $user = User::find($codigoCliente);
+
+        if(!$user->Ativa) {
+            return response()->json([
+                "conta" => [
+                    'Cliente' => ['codigoCliente' => $codigoCliente, 'Ativa' => $user->Ativa, 'LimiteDisponivel' => $user->LimiteDisponivel],
+                    'violacao' => ['conta-nao-ativa']
+                ]
+            ], 200);
+        }
+
         $_SESSION['Cliente'][$codigoCliente]['codigoCliente'] = $codigoCliente;
         $_SESSION['Cliente'][$codigoCliente]['Ativa'] = $user->Ativa;
         $_SESSION['Cliente'][$codigoCliente]['LimiteDisponivel'] = $user->LimiteDisponivel;

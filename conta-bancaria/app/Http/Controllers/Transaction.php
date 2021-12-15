@@ -60,6 +60,16 @@ class Transaction extends Controller
 
         $saldo = false;
         foreach ($arra['transacao'] as $key => $val) {
+            $newDate = date("Y-m-d H:i:\%");
+
+            $transaction = ApiTransaction::where('user_id', $codigoCliente)
+                ->where('valor', $val['valor'])
+                ->where('tipo', $val['tipo'])
+                ->where('created_at', 'like', $newDate)->get();
+            if($transaction->count() > 0) {
+                $response = ['conta' => [$_SESSION['Cliente'][$codigoCliente]], 'violacao' => ['transação-duplicada']];
+                return $response;
+            }
             $saldo = $this->setSaldo($val, $limite);
 
             $newTransaction = [

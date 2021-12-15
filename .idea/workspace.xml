@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/conta-bancaria/app/Http/Controllers/Transaction.php" line="107" mnemonic="1" />
-    <bookmark url="file://$PROJECT_DIR$/conta-bancaria/app/Http/Controllers/ApiTransactionController.php" line="33" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/conta-bancaria/app/Http/Controllers/Transaction.php" line="117" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/conta-bancaria/app/Http/Controllers/ApiTransactionController.php" line="43" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="561305be-bd86-465d-9fc0-64b3588116e8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/StickySelectionHighlights.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/StickySelectionHighlights.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conta-bancaria/app/Http/Controllers/ApiTransactionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/conta-bancaria/app/Http/Controllers/ApiTransactionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conta-bancaria/app/Http/Controllers/Transaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/conta-bancaria/app/Http/Controllers/Transaction.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/conta-bancaria/app/Http/Controllers/Transaction.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="178">
-              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+              <caret line="66" column="45" lean-forward="true" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="45" />
               <folding>
                 <element signature="e#40#70#0#PHP" expanded="true" />
               </folding>
@@ -36,8 +37,8 @@
       <file leaf-file-name="ApiTransactionController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conta-bancaria/app/Http/Controllers/ApiTransactionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="93">
+              <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -64,11 +65,12 @@
       <find>api_transaction</find>
       <find>Open the DummyDataSeeder and set the property values as per your requirement</find>
       <find>You can now access the server at http://localhost:8000</find>
-      <find>validateTransition</find>
       <find>, 201</find>
       <find>201</find>
       <find>$status</find>
       <find>setTransition</find>
+      <find>validateTransition</find>
+      <find>data</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -89,9 +91,9 @@
         <option value="$PROJECT_DIR$/conta-bancaria/routes/api.php" />
         <option value="$PROJECT_DIR$/conta-bancaria/routes/web.php" />
         <option value="$PROJECT_DIR$/conta-bancaria/app/Http/Middleware/VerifyCsrfToken.php" />
-        <option value="$PROJECT_DIR$/conta-bancaria/app/Http/Controllers/ApiTransactionController.php" />
         <option value="$PROJECT_DIR$/conta-bancaria/README.md" />
         <option value="$PROJECT_DIR$/conta-bancaria/app/Providers/RouteServiceProvider.php" />
+        <option value="$PROJECT_DIR$/conta-bancaria/app/Http/Controllers/ApiTransactionController.php" />
         <option value="$PROJECT_DIR$/conta-bancaria/app/Http/Controllers/Transaction.php" />
       </list>
     </option>
@@ -312,12 +314,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639573690093</updated>
-      <workItem from="1639573691783" duration="17135000" />
+      <workItem from="1639573691783" duration="19174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17135000" />
+    <option name="totallyTimeSpent" value="19174000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -489,15 +491,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/conta-bancaria/app/Http/Controllers/ApiTransactionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="93">
+          <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conta-bancaria/app/Http/Controllers/Transaction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+          <caret line="66" column="45" lean-forward="true" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="45" />
           <folding>
             <element signature="e#40#70#0#PHP" expanded="true" />
           </folding>
